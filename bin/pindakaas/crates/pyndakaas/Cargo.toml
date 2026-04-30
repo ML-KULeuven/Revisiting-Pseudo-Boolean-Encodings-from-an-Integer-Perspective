@@ -1,0 +1,27 @@
+[package]
+name = "pyndakaas"
+description = "Python interface for to the pindakaas crate"
+
+authors.workspace = true
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+homepage.workspace = true
+categories.workspace = true
+keywords.workspace = true
+repository.workspace = true
+
+[lib]
+name = "pindakaas"
+crate-type = ["cdylib"]
+doc = false
+
+[dependencies]
+pindakaas = { path = "../pindakaas" }
+pyo3 = { version = "0.22", features = ["extension-module"] }
+
+[build-dependencies]
+pyo3-build-config = "0.22"
+
+[lints]
+workspace = true
